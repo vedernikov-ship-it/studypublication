@@ -1,0 +1,234 @@
+body {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #00d4ff;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-left: 4px solid #00d4ff;
+    padding-left: 15px;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #ff6b35;
+}
+
+.logo-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.logo-container a img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #00d4ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-container a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+}
+
+nav {
+    background-color: #16213e;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #00d4ff;
+    margin-left: 100px;
+}
+
+nav a {
+    color: #00d4ff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1em;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    border: 1px solid #00d4ff;
+    background-color: rgba(0, 212, 255, 0.1);
+    text-shadow: 0 0 8px rgba(0, 212, 255, 0.8);
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    padding-top: 120px;
+}
+
+section {
+    background-color: rgba(22, 33, 62, 0.8);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid #333;
+}
+
+.file-links {
+    list-style: none;
+    padding: 0;
+}
+
+.file-links li {
+    padding: 10px 15px;
+    margin: 8px 0;
+    background-color: rgba(0, 212, 255, 0.05);
+    border-left: 3px solid #ff6b35;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.file-links li:hover {
+    background-color: rgba(0, 212, 255, 0.15);
+}
+
+.file-links a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 1.05em;
+}
+
+.file-links a:hover {
+    text-decoration: underline;
+    color: #ff6b35;
+}
+
+.image-text-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.image-text-container img {
+    width: 350px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #00d4ff;
+    flex-shrink: 0;
+}
+
+.image-text-container .text-block {
+    flex: 1;
+}
+
+/* Анимация - пульсация заголовка */
+@keyframes pulse {
+    0% { text-shadow: 0 0 10px rgba(0, 212, 255, 0.5); }
+    50% { text-shadow: 0 0 25px rgba(0, 212, 255, 0.9), 0 0 40px rgba(0, 212, 255, 0.4); }
+    100% { text-shadow: 0 0 10px rgba(0, 212, 255, 0.5); }
+}
+
+h1 {
+    animation: pulse 3s infinite;
+}
+
+
+section {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes neonBlink {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        border-color: #00d4ff;
+        box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    }
+    20%, 24%, 55% {
+        border-color: transparent;
+        box-shadow: none;
+    }
+}
+
+.neon-border {
+    animation: neonBlink 4s infinite;
+    border: 2px solid #00d4ff;
+}
+
+body.bg-image-page {
+    background-image: url('images/image7.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.bg-image-page .content {
+    background-color: rgba(26, 26, 46, 0.85);
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #333;
+}
+
+table th {
+    background-color: #16213e;
+    color: #00d4ff;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(22, 33, 62, 0.5);
+}
+
+table tr:hover {
+    background-color: rgba(0, 212, 255, 0.1);
+}
+
+.img-placeholder {
+    width: 350px;
+    height: 250px;
+    background-color: rgba(0, 212, 255, 0.1);
+    border: 2px dashed #00d4ff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-style: italic;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 5px rgba(0, 212, 255, 0.3); }
+    to { box-shadow: 0 0 20px rgba(0, 212, 255, 0.6); }
+}
+
+section:hover {
+    animation: glow 1s ease-in-out infinite alternate;
+}
